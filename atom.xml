@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>lqf的随手笔记</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://github.com/luoqingfu/"/>
+  <updated>2018-08-04T12:11:43.548Z</updated>
+  <id>https://github.com/luoqingfu/</id>
+  
+  <author>
+    <name>lqf</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>自动化平台测试开发笔记（1）</title>
+    <link href="https://github.com/luoqingfu/2018/08/04/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B9%B3%E5%8F%B0%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/"/>
+    <id>https://github.com/luoqingfu/2018/08/04/自动化平台测试开发笔记（1）/</id>
+    <published>2018-08-04T11:48:27.000Z</published>
+    <updated>2018-08-04T12:11:43.548Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="django"><a href="#django" class="headerlink" title="django"></a>django</h3><p>查看django版本<br>import django<br>django.get_version()  </p><h3 id="创建一个Django项目"><a href="#创建一个Django项目" class="headerlink" title="创建一个Django项目"></a>创建一个Django项目</h3><p>django-admin startproject 工程名  </p><h4 id="迁移数据"><a href="#迁移数据" class="headerlink" title="迁移数据"></a>迁移数据</h4><p>python manage.py migrate</p><h4 id="创建超级用户"><a href="#创建超级用户" class="headerlink" title="创建超级用户"></a>创建超级用户</h4><p>python manage.py createsuperuser<br>用户名为：admin<br>邮箱：<a href="mailto:746832476@qq.com" target="_blank" rel="noopener">746832476@qq.com</a><br>密码：123456</p><h4 id="创建apitest项目"><a href="#创建apitest项目" class="headerlink" title="创建apitest项目"></a>创建apitest项目</h4><p>python manage.py startapp apitest  </p><ul><li>创建视图</li><li>创建映射</li><li>创建templates文件夹</li><li>创建login.html</li><li>写入映射</li><li></li></ul><hr><p> mac系统 MySQL 8.0.11版本，安装成功，使用Navicat连接失败</p><p>MySQL安装成功之后，使用navicat连接失败，报错如下：</p><p>　　</p><p>2059 - Authentication plugin ‘caching_sha2_password’ cannot be loaded: dlopen(../Frameworks/caching_sha2_password.so, 2): image not found</p><p>大概意思就是无法加载身份验证插件’caching_sha2_password”<br>解决</p><pre><code>打开系统偏好设置，找到mysql，点击Initialize Database。输入你的密码。选择‘Use legacy password‘。重启mysql服务。现在可以使用Navicat链接小插曲：来源https://www.cnblogs.com/Jiangchuanwei/p/9000939.html</code></pre><hr>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;django&quot;&gt;&lt;a href=&quot;#django&quot; class=&quot;headerlink&quot; title=&quot;django&quot;&gt;&lt;/a&gt;django&lt;/h3&gt;&lt;p&gt;查看django版本&lt;br&gt;import django&lt;br&gt;django.get_version()  &lt;
+      
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="https://github.com/luoqingfu/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+</feed>
