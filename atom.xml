@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/luoqingfu/"/>
-  <updated>2018-08-06T03:40:48.051Z</updated>
+  <updated>2018-08-06T08:20:06.687Z</updated>
   <id>https://github.com/luoqingfu/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>airtest笔记</title>
+    <link href="https://github.com/luoqingfu/2018/08/06/airtest%E7%AC%94%E8%AE%B0/"/>
+    <id>https://github.com/luoqingfu/2018/08/06/airtest笔记/</id>
+    <published>2018-08-06T08:18:20.000Z</published>
+    <updated>2018-08-06T08:20:06.687Z</updated>
+    
+    <content type="html"><![CDATA[<p>Airtest其实是个测试套件，由Airtest框架、poco框架、airtestIDE 组成。<br>基于图像识别的自动化测试框架，是网易自己团队开发的。这个框架核心不在实现方式和技术上，而是理念！这个框架的祖宗是MIT（麻省理工）研究院的成果 Sikuli ，他们构思了一种全新的UI测试模式，基于图像识别控件而不是具体内存里的控件对象</p><p>首先配置好android，配置android home，以及javahome。然后连上真机<br>或者模拟器，连上电脑的标志。在命令行输入：adb devices</p><p>在该地址中下载好ide即可安装使用：<a href="http://airtest.netease.com/" target="_blank" rel="noopener">http://airtest.netease.com/</a></p><p>首先连入真机或者模拟器，然后刷新adb后会出现你所连接的设备</p><p>连接上后会变为真机或者模拟器界面</p><p>注意⚠️：<br>  ● 请使用USB线连接手机，手机上出现的 允许USB调试 弹窗点击 确定，<br>  ● 点击 refresh ADB 按钮，设备列表将会刷新，<br>  ● 点击列表内对应设备的 Connect 完成连接，<br>  ● 若设备未刷出，点击 refresh ADB 按钮.<br>这里的模拟器推荐用原生的或者夜神模拟器</p><p>  ● 安装Android环境：<br>搭建 Android Studio ，完成后在 Android Studio 中，选择 Tools &gt; Android &gt; AVD Manager<br>  ● 创建模拟器：<br>      ○ 创建设备界面：</p><p>选择设备：</p><p>选择系统：</p><p>配置页面填写如下：</p><p>设备创建完成，启动虚拟设备：</p><p>编写一个简单案例：</p><p>  ● 点击Airtest辅助窗中的辅助录制按钮 touch/swipe/wait/exists/assert_exists/assert_not_exists ，<br>  ● 在设备画面中，用鼠标框选截图区域，<br>  ● 点击 运行 按钮或者F5快捷键，运行脚本</p><p>  ● 脚本运行结束后，点击 查看运行报告 按钮，会自动弹出运行报告网页。</p><p>Airtest辅助窗内包含有三种类型的录制按钮:<br>操作类型 辅助类型 断言类型<br>touch text assert_exists<br>swipe keyevent assert_not_exists<br>wait server_call assert_equal<br>exist sleep assert_not_equal<br>snapshot<br>辅助按键录制脚本<br>点击 touch/swipe/wait/exists/assert_exists/assert_not_exists 按钮后，在设备画面上按下鼠标左键进行截图框选，抬起鼠标左键完成框选。对应操作语句会自动插入编辑器脚本中。</p><p>脚本自动录制功能</p><p>点击自动录制按钮后，使用鼠标操作设备画面，对应操作语句会自动插入到编辑器脚本中。</p><p>插入截图功能</p><p>点击”插入截图”按钮后，在设备画面上框选截图后，对应图片会自动插入到编辑器脚本。<br>可以使用本功能对图片进行自定义逻辑封装，比如循环识别某几个图片。</p><p>运行Airtest脚本&amp;查看报告</p><p>红框中依次为运行脚本、停止运行、查看运行报告按钮：<br>  ● 运行脚本<br>      a. 点击红圈内左侧按钮<br>      b. 或者 F5<br>  ● 停止运行<br>      a. 点击红圈内中间按钮<br>      b. 或者 F10<br>  ● 查看报告<br>      a. 点击红圈内右侧按钮<br>      b. 或者 Ctrl + L</p><p>poco辅助功能<br>Poco 是一种 基于UI识别 的测试框架。AirtestIDE对Poco框架进行了使用支持，提供了UI查看、脚本自动录制等辅助功能。</p><p>3.1.2 已支持的应用类型<br>Poco对不同类型的应用支持情况：<br>应用类型 poco-sdk<br>Android 无需sdk, Android详情<br>Cocos-lua 集成文档(Cocos-lua)<br>Cocos-js 集成文档（Cocos-js）<br>Unity 集成文档（Unity）<br>Netease 仅限网易内部使用， Netease详情</p><p>展示UI渲染树</p><p>在使用UI渲染树查看功能前，请确保必备的 Poco-SDK 已嵌入，且应用正常开启。<br>将辅助窗的下拉选项切换到对应选项，稍等片刻即可刷出UI树。<br>如果没有刷出，可尝试数据探针的重启操作：先切换至 “Stop” 选项，再切换到对应选项。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Airtest其实是个测试套件，由Airtest框架、poco框架、airtestIDE 组成。&lt;br&gt;基于图像识别的自动化测试框架，是网易自己团队开发的。这个框架核心不在实现方式和技术上，而是理念！这个框架的祖宗是MIT（麻省理工）研究院的成果 Sikuli ，他们构思了
+      
+    
+    </summary>
+    
+    
+      <category term="随手" scheme="https://github.com/luoqingfu/tags/%E9%9A%8F%E6%89%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>python入门笔记04</title>
