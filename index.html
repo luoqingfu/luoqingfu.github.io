@@ -182,6 +182,23 @@
 现在可以使用Navicat链接
 小插曲：来源https://www.cnblogs.com/Jiangchuanwei/p/9000939.html
 </code></pre><hr>
+<p>修改mysql端口：<br>安装好MySQL后通过<br>mysql&gt; show global variables like ‘port’;</p>
+<p>+—————+——-+</p>
+<p>| Variable_name | Value |</p>
+<p>+—————+——-+</p>
+<p>| port          |   0   |</p>
+<p>+—————+——-+</p>
+<p>查看端口后发现端口为0，</p>
+<p>查看/Library/LaunchDaemons下的com.oracle.oss.mysql.mysqld.plist发现根本就没有Port相关的配置</p>
+<p>第一步、停止MySQL服务</p>
+<p>第二部、在com.oracle.oss.mysql.mysqld.plist文件中的ProgramArguments下添加<string>–port=3306</string>保存退出</p>
+<p>重启MySQL数据库，再次查看MySQL端口</p>
+<p>+—————+——-+</p>
+<p>| Variable_name | Value |</p>
+<p>+—————+——-+</p>
+<p>| port          | 3306  |</p>
+<p>+—————+——-+</p>
+<p>在终端下端口显示正确了，打开navicat，连接成功。<br>来源：<a href="https://blog.csdn.net/lixingqiao01/article/details/50956849" target="_blank" rel="noopener">https://blog.csdn.net/lixingqiao01/article/details/50956849</a></p>
 
       
 
