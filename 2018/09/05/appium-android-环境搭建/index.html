@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://github.com/luoqingfu">
   <title>appium(android)环境搭建 | lqf的随手笔记</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="安装jdk1、右击计算机-属性-高级系统设置-高级-环境变量-系统变量-新建：变量名：JAVA_HOME变量值：C:\Program Files\Java\jdk1.8.0_91 2、系统变量→寻找 Path 变量→编辑在变量值最后输入 %JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;  （注意原来Path的变量值末尾有没有;号，如果没有，先输入；号再输入上面的代码）&amp;lt">
+  <meta name="description" content="安装jdk1、右击计算机-属性-高级系统设置-高级-环境变量-系统变量-新建：变量名：JAVA_HOME变量值：C:\Program Files\Java\jdk1.8.0_91 2、系统变量→寻找 Path 变量→编辑在变量值最后输入 %JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;  （注意原来Path的变量值末尾有没有;号，如果没有，先输入；号再输入上面的代码） 3、">
 <meta name="keywords" content="随笔">
 <meta property="og:type" content="article">
 <meta property="og:title" content="appium(android)环境搭建">
 <meta property="og:url" content="https://github.com/luoqingfu/2018/09/05/appium-android-环境搭建/index.html">
 <meta property="og:site_name" content="lqf的随手笔记">
-<meta property="og:description" content="安装jdk1、右击计算机-属性-高级系统设置-高级-环境变量-系统变量-新建：变量名：JAVA_HOME变量值：C:\Program Files\Java\jdk1.8.0_91 2、系统变量→寻找 Path 变量→编辑在变量值最后输入 %JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;  （注意原来Path的变量值末尾有没有;号，如果没有，先输入；号再输入上面的代码）&amp;lt">
+<meta property="og:description" content="安装jdk1、右击计算机-属性-高级系统设置-高级-环境变量-系统变量-新建：变量名：JAVA_HOME变量值：C:\Program Files\Java\jdk1.8.0_91 2、系统变量→寻找 Path 变量→编辑在变量值最后输入 %JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;  （注意原来Path的变量值末尾有没有;号，如果没有，先输入；号再输入上面的代码） 3、">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:updated_time" content="2018-09-05T13:04:34.606Z">
+<meta property="og:updated_time" content="2018-09-05T13:10:13.189Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="appium(android)环境搭建">
-<meta name="twitter:description" content="安装jdk1、右击计算机-属性-高级系统设置-高级-环境变量-系统变量-新建：变量名：JAVA_HOME变量值：C:\Program Files\Java\jdk1.8.0_91 2、系统变量→寻找 Path 变量→编辑在变量值最后输入 %JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;  （注意原来Path的变量值末尾有没有;号，如果没有，先输入；号再输入上面的代码）&amp;lt">
+<meta name="twitter:description" content="安装jdk1、右击计算机-属性-高级系统设置-高级-环境变量-系统变量-新建：变量名：JAVA_HOME变量值：C:\Program Files\Java\jdk1.8.0_91 2、系统变量→寻找 Path 变量→编辑在变量值最后输入 %JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;  （注意原来Path的变量值末尾有没有;号，如果没有，先输入；号再输入上面的代码） 3、">
   
     <link rel="alternative" href="/atom.xml" title="lqf的随手笔记" type="application/atom+xml">
   
@@ -166,9 +166,10 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h4 id="安装jdk"><a href="#安装jdk" class="headerlink" title="安装jdk"></a>安装jdk</h4><p>1、右击计算机-属性-高级系统设置-高级-环境变量-系统变量-新建：<br>变量名：JAVA_HOME<br>变量值：C:\Program Files\Java\jdk1.8.0_91</p>
-<p>2、系统变量→寻找 Path 变量→编辑<br>在变量值最后输入 %JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;  （注意原来Path的变量值末尾有没有;号，如果没有，先输入；号再输入上面的代码）<br>&lt;!– more –!&gt;<br>3、系统变量→新建 CLASSPATH 变量<br>变量值填写   .;%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar（注意最前面有一点）</p>
+<p>2、系统变量→寻找 Path 变量→编辑<br>在变量值最后输入 %JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;  （注意原来Path的变量值末尾有没有;号，如果没有，先输入；号再输入上面的代码）</p>
+<p>3、系统变量→新建 CLASSPATH 变量<br>变量值填写   .;%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar（注意最前面有一点）</p>
 <p>4、检验是否配置成功 运行cmd 输入 java -version （java 和 -version 之间有空格）</p>
-<p> 显示版本信息 java(TM) SE Runtime Environment …. 则说明安装和配置成功。  </p>
+<h2 id="显示版本信息-java-TM-SE-Runtime-Environment-…-则说明安装和配置成功。"><a href="#显示版本信息-java-TM-SE-Runtime-Environment-…-则说明安装和配置成功。" class="headerlink" title=" 显示版本信息 java(TM) SE Runtime Environment …. 则说明安装和配置成功。  "></a> 显示版本信息 java(TM) SE Runtime Environment …. 则说明安装和配置成功。  </h2> <a id="more"></a>
 <h4 id="安装androidstudio"><a href="#安装androidstudio" class="headerlink" title="安装androidstudio"></a>安装androidstudio</h4><p>1、新增系统变量<br>变量名：ANDROID_HOME<br>变量值：C:\android_sdk（改成对应的路径即可）</p>
 <p>2、在path中添加：</p>
 <p>%ANDROID_HOME%\platform-tools;%ANDROID_HOME%\tools;  </p>
