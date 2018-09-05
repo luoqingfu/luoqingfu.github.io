@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/luoqingfu/"/>
-  <updated>2018-09-05T13:13:50.080Z</updated>
+  <updated>2018-09-05T13:14:27.034Z</updated>
   <id>https://github.com/luoqingfu/</id>
   
   <author>
@@ -21,17 +21,16 @@
     <link href="https://github.com/luoqingfu/2018/09/05/appium-android-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
     <id>https://github.com/luoqingfu/2018/09/05/appium-android-环境搭建/</id>
     <published>2018-09-05T07:16:32.000Z</published>
-    <updated>2018-09-05T13:13:50.080Z</updated>
+    <updated>2018-09-05T13:14:27.034Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="安装jdk"><a href="#安装jdk" class="headerlink" title="安装jdk"></a>安装jdk</h4><p>1、右击计算机-属性-高级系统设置-高级-环境变量-系统变量-新建：<br>变量名：JAVA_HOME<br>变量值：C:\Program Files\Java\jdk1.8.0_91</p><p>2、系统变量→寻找 Path 变量→编辑<br>在变量值最后输入 %JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;  （注意原来Path的变量值末尾有没有;号，如果没有，先输入；号再输入上面的代码）</p><p>3、系统变量→新建 CLASSPATH 变量<br>变量值填写   .;%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar（注意最前面有一点）</p><p>4、检验是否配置成功 运行cmd 输入 java -version （java 和 -version 之间有空格）</p><p> 显示版本信息 java(TM) SE Runtime Environment …. 则说明安装和配置成功。  </p><hr><a id="more"></a><h4 id="安装androidstudio"><a href="#安装androidstudio" class="headerlink" title="安装androidstudio"></a>安装androidstudio</h4><p>1、新增系统变量<br>变量名：ANDROID_HOME<br>变量值：C:\android_sdk（改成对应的路径即可）</p><p>2、在path中添加：</p><p>%ANDROID_HOME%\platform-tools;%ANDROID_HOME%\tools;  </p><h4 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h4><p>管网下载后直接安装，会自动加入到环境变量中<br>使用npm命令可以验证是否安装成功  </p><h4 id="安装appium"><a href="#安装appium" class="headerlink" title="安装appium"></a>安装appium</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g appium</span><br></pre></td></tr></table></figure><p>或者直接在官网下载桌面端</p>]]></content>
+    <content type="html"><![CDATA[<h4 id="安装jdk"><a href="#安装jdk" class="headerlink" title="安装jdk"></a>安装jdk</h4><p>1、右击计算机-属性-高级系统设置-高级-环境变量-系统变量-新建：<br>变量名：JAVA_HOME<br>变量值：C:\Program Files\Java\jdk1.8.0_91</p><p>2、系统变量→寻找 Path 变量→编辑<br>在变量值最后输入 %JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;  （注意原来Path的变量值末尾有没有;号，如果没有，先输入；号再输入上面的代码）</p><p>3、系统变量→新建 CLASSPATH 变量<br>变量值填写   .;%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar（注意最前面有一点）</p><p>4、检验是否配置成功 运行cmd 输入 java -version （java 和 -version 之间有空格）<br>显示版本信息 java(TM) SE Runtime Environment …. 则说明安装和配置成功。  </p><hr><a id="more"></a><h4 id="安装androidstudio"><a href="#安装androidstudio" class="headerlink" title="安装androidstudio"></a>安装androidstudio</h4><p>1、新增系统变量<br>变量名：ANDROID_HOME<br>变量值：C:\android_sdk（改成对应的路径即可）</p><p>2、在path中添加：</p><p>%ANDROID_HOME%\platform-tools;%ANDROID_HOME%\tools;  </p><h4 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h4><p>管网下载后直接安装，会自动加入到环境变量中<br>使用npm命令可以验证是否安装成功  </p><h4 id="安装appium"><a href="#安装appium" class="headerlink" title="安装appium"></a>安装appium</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g appium</span><br></pre></td></tr></table></figure><p>或者直接在官网下载桌面端</p>]]></content>
     
     <summary type="html">
     
       &lt;h4 id=&quot;安装jdk&quot;&gt;&lt;a href=&quot;#安装jdk&quot; class=&quot;headerlink&quot; title=&quot;安装jdk&quot;&gt;&lt;/a&gt;安装jdk&lt;/h4&gt;&lt;p&gt;1、右击计算机-属性-高级系统设置-高级-环境变量-系统变量-新建：&lt;br&gt;变量名：JAVA_HOME&lt;br&gt;变量值：C:\Program Files\Java\jdk1.8.0_91&lt;/p&gt;
 &lt;p&gt;2、系统变量→寻找 Path 变量→编辑&lt;br&gt;在变量值最后输入 %JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;  （注意原来Path的变量值末尾有没有;号，如果没有，先输入；号再输入上面的代码）&lt;/p&gt;
 &lt;p&gt;3、系统变量→新建 CLASSPATH 变量&lt;br&gt;变量值填写   .;%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar（注意最前面有一点）&lt;/p&gt;
-&lt;p&gt;4、检验是否配置成功 运行cmd 输入 java -version （java 和 -version 之间有空格）&lt;/p&gt;
-&lt;p&gt; 显示版本信息 java(TM) SE Runtime Environment …. 则说明安装和配置成功。  &lt;/p&gt;
+&lt;p&gt;4、检验是否配置成功 运行cmd 输入 java -version （java 和 -version 之间有空格）&lt;br&gt;显示版本信息 java(TM) SE Runtime Environment …. 则说明安装和配置成功。  &lt;/p&gt;
 &lt;hr&gt;
     
     </summary>
