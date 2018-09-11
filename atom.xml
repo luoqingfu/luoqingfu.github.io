@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/luoqingfu/"/>
-  <updated>2018-09-05T13:14:27.034Z</updated>
+  <updated>2018-09-11T15:36:53.830Z</updated>
   <id>https://github.com/luoqingfu/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux基础命令</title>
+    <link href="https://github.com/luoqingfu/2018/09/11/Linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/"/>
+    <id>https://github.com/luoqingfu/2018/09/11/Linux基础命令/</id>
+    <published>2018-09-11T15:35:59.000Z</published>
+    <updated>2018-09-11T15:36:53.830Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h4><ol><li>ctrl+shirt+（+）增大终端大小  </li><li>ctrl+（—）减小终端大小</li><li>ls当前路径所有文件  </li><li>–help 使用帮助文档例如：ls –help  </li><li>tab自动补全，两次tab显示全部可以不全内容</li><li>touch+文件名，新增文件，cat+文件名，显示文件内容</li><li>history 查看命令的历史记录<a id="more"></a></li><li>! history(编号) 执行历史命令</li><li>rm  +文件名，删除该文件 -r（删除文件夹）</li><li>mkdir +文件夹名，创建文件夹  -p创建依赖的文件夹</li><li>通配符 例如ls 2*（多位） ？通配一位 ，[]通配里面的内容（一位）</li><li>‘&gt;’重定向，‘&gt;&gt;’追加</li><li>more 可以分屏显示文件内容 （b&amp;f上下页）‘|’more组合使用其他命令</li><li>clear 清屏</li><li>cd 打开文件夹 ./当前路径,..上个路径。组合使用../..  /绝对路径 -回到上个路径</li><li>pwd 显示绝对路径</li><li>tree 目录树 </li><li>mv 重命名 mv 原文件名 新文件名</li><li>grep -n “搜索条件” 文件名 </li><li>mv 文件名 文件夹名 移动文件</li><li>cp 文件 文件夹名 复制文件   -r 复制文件夹下的所有文件</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;基本命令&quot;&gt;&lt;a href=&quot;#基本命令&quot; class=&quot;headerlink&quot; title=&quot;基本命令&quot;&gt;&lt;/a&gt;基本命令&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;ctrl+shirt+（+）增大终端大小  &lt;/li&gt;
+&lt;li&gt;ctrl+（—）减小终端大小&lt;/li&gt;
+&lt;li&gt;ls当前路径所有文件  &lt;/li&gt;
+&lt;li&gt;–help 使用帮助文档例如：ls –help  &lt;/li&gt;
+&lt;li&gt;tab自动补全，两次tab显示全部可以不全内容&lt;/li&gt;
+&lt;li&gt;touch+文件名，新增文件，cat+文件名，显示文件内容&lt;/li&gt;
+&lt;li&gt;history 查看命令的历史记录
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="https://github.com/luoqingfu/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>appium(android)环境搭建</title>
