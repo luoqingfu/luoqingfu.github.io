@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://github.com/luoqingfu/2018/12/09/Django%E5%AD%A6%E4%B9%A001/</loc>
+    
+    <lastmod>2018-12-09T09:03:47.284Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://github.com/luoqingfu/2018/11/23/jenkins-pytest-allure%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</loc>
     
     <lastmod>2018-12-07T01:39:04.329Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>https://github.com/luoqingfu/2018/09/05/appium-android-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</loc>
     
     <lastmod>2018-09-05T13:14:27.034Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://github.com/luoqingfu/2018/08/12/Django%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</loc>
-    
-    <lastmod>2018-08-12T16:04:43.642Z</lastmod>
     
   </url>
   
