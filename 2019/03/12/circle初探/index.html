@@ -18,7 +18,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://circleci.com/docs/assets/img/docs/status_badge.png">
 <meta property="og:image" content="https://circleci.com/docs/assets/img/docs/status_check.png">
-<meta property="og:updated_time" content="2019-03-12T10:16:20.839Z">
+<meta property="og:updated_time" content="2019-03-12T10:17:32.626Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="circle初探">
 <meta name="twitter:description" content="github注册并添加到circleci中会添加一个钩子，用于在有pr是进行测试，也会有邮件提醒，取决于你的设置 添加.circleci / config.yml文件在创建.circleci/config.yml文件并将其提交到GitHub储库后，CircleCI会立即检查您的代码并运行配置好的测试代码12345678910jobs:  build:    docker:      - image">
@@ -174,16 +174,10 @@
 <p>集成状态也会出现在拉取请求屏幕上，以显示所有测试都已通过：<br><img src="https://circleci.com/docs/assets/img/docs/status_check.png" alt="image">  </p>
 <h4 id="部署密钥和用户密钥"><a href="#部署密钥和用户密钥" class="headerlink" title="部署密钥和用户密钥"></a>部署密钥和用户密钥</h4><p>如果使用GitHub作为VCS，则GitHub具有公钥，而CircleCI存储私钥。部署密钥使CircleCI可以访问单个存储库。为防止CircleCI推送到您的存储库，此部署密钥是只读的。</p>
 <h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><p>在github上创建一个项目 ：<a href="https://github.com/username/test-repo">repo</a></p>
-<!-- more --!>
-1，[生成密钥](https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)： 按照提示生成密钥  
-
-会在/Users/yourusername/.ssh下生成一个密钥  
-2，转到https://github.com/you/test-repo/settings/keys，然后单击“添加部署密钥”。在“标题”字段中输入标题，然后复制并粘贴在步骤1中创建的密钥。选中“允许写访问”，然后单击“添加密钥”。(直接按配置后即可)
-
-
-#### hello world 
-添加.circleci/config.yml。 yml添加：
-
+<p>1，<a href="https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" target="_blank" rel="noopener">生成密钥</a>： 按照提示生成密钥  </p>
+<p>会在/Users/yourusername/.ssh下生成一个密钥<br>2，转到<a href="https://github.com/you/test-repo/settings/keys，然后单击“添加部署密钥”。在“标题”字段中输入标题，然后复制并粘贴在步骤1中创建的密钥。选中“允许写访问”，然后单击“添加密钥”。(直接按配置后即可)">https://github.com/you/test-repo/settings/keys，然后单击“添加部署密钥”。在“标题”字段中输入标题，然后复制并粘贴在步骤1中创建的密钥。选中“允许写访问”，然后单击“添加密钥”。(直接按配置后即可)</a></p>
+<a id="more"></a>
+<h4 id="hello-world"><a href="#hello-world" class="headerlink" title="hello world"></a>hello world</h4><p>添加.circleci/config.yml。 yml添加：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">version: <span class="number">2.1</span></span><br><span class="line"></span><br><span class="line">orbs:</span><br><span class="line">    hello: circleci/hello-build@<span class="number">0.0</span><span class="number">.7</span> <span class="comment"># uses the circleci/buildpack-deps Docker image</span></span><br><span class="line"></span><br><span class="line">workflows:</span><br><span class="line">    <span class="string">"Hello Workflow"</span>:</span><br><span class="line">        jobs:</span><br><span class="line">          - hello/hello-build</span><br></pre></td></tr></table></figure>
 <p>commit and push 即可触发构建</p>
 <h4 id="在构建时输出hello-world"><a href="#在构建时输出hello-world" class="headerlink" title="在构建时输出hello world"></a>在构建时输出hello world</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">version: <span class="number">2</span></span><br><span class="line">jobs:</span><br><span class="line">  build:</span><br><span class="line">    docker: <span class="comment"># use the docker executor type; machine and macos executors are also supported</span></span><br><span class="line">      - image: circleci/node:<span class="number">4.8</span><span class="number">.2</span> <span class="comment"># the primary container, where your job's commands are run</span></span><br><span class="line">    steps:</span><br><span class="line">      - checkout <span class="comment"># check out the code in the project directory</span></span><br><span class="line">      - run: echo <span class="string">"hello world"</span> <span class="comment"># run the `echo` command</span></span><br></pre></td></tr></table></figure>
@@ -219,7 +213,7 @@
 </li>
 </ol>
 <h4 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h4><p>docker 的推送以及部署，涉及docker，以及部署命令，现在为大概了解ci是怎么样的一个过程，如果有可能，将会对自动化的持续集成有重大意义。待补充开发知识后再做实践</p>
--->
+
       
 
       
