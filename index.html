@@ -145,107 +145,15 @@
     <article id="post-自动化测试-持续集成" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/12/自动化测试-持续集成/">自动化测试&amp;持续集成</a>
-    </h1>
-  
-
-        
-        <a href="/2019/12/12/自动化测试-持续集成/" class="archive-article-date">
-  	<time datetime="2019-12-12T02:31:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-12</time>
-</a>
-        
-      </header>
-    
     <div class="article-entry" itemprop="articleBody">
       
-        <p>1.问题思考<br>A.什么是自动化？自动化分为哪几个？<br>B.自动化测试是不是可信？<br>C.自动化并没有解放我们？</p>
-<!-- more --!>
-
-A.1:
-“手工测试”：
-如图可以，手工测试就是手动地去遍历被测软件的所有功能。  
-![](自动化测试-持续集成/hand.png)
-
-自动化测试：
-自动化测试就是让被测试的软件自己运行起来，执行软件的功能。
-![](自动化测试-持续集成/auto.png)
-实际上我们所说的自动化测试就是通过编写一点的脚本，让被测程序按照编写好的路径遍历功能
-![](自动化测试-持续集成/实际上.png)
-事实上，自动化测试覆盖了从 UI （功能测试）到接口测试以及单元测试的整个过程，要想很好的掌握自动化测试，那么的确需要以下三种领域的经验积累：
-编程语言，面向对象编程优先，因为大量的开源技术方案，都是基于面向对象的编程方式
-第三方测试工具和测试框架，这些主要通过官网的文档学习
-测试的理念与设计，工具和语言，只是测试的手段，如何准备测试数据，如何设置测试的检查点与测试步骤，这些决定了测试的成败
-
-1，UI自动化（以selenium2为例）
-多浏览器支持
-多语言支持
-多操作系统支持
-开源免费
-
-![](自动化测试-持续集成/开源.png)
-1，脚本运行之后打开指定的浏览起，接收测试脚本的命令
-2，webdriver操作浏览器（通过浏览器的原生组件，转化webserver命令为浏览器调用）
-3，用户操作web application过程
-
-
-手动功能测试：
-1.打开浏览器，输入网址
-2.找到账号输入框输入账号
-3.找到密码输入框输入密码
-4.点击登录按钮
-5.判断是否登录成功
-自动化测试
-最小测试case
-![](自动化测试-持续集成/最小testcase.png)
-以及修改后只关心流程的代码
-![](自动化测试-持续集成/修改后.png)
-测试报告
-![](自动化测试-持续集成/测试报告.png)
-接口测试：
-接口文档：
-接口简介：
-用户登录英荔播客平台
-接口地址：
-https://yingliboke.cn/api/account/login
-请求类型：
-post
-请求参数  
-
-参数名 | 类型 | 必填 | 描述 | 默认值 | 参考值  
----|---|---|---|---|---  
-device_type | string | 是 | 设备类型 | 空 | web  
-token | string | 是 | token值 | 空 | 空  
-company_id | string | 是 | 组织id | 空 | 空  
-target | string | 是 | 账号 | 无 | 13226349780  
-password | string | 是 | 密码 | 无 | 123456  
-target_type | string | 是 | 账号类型 | 无 | 1（手机号码）  
-
-
-返回正确json示例
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="string">"code"</span>: <span class="number">1</span>,</span><br><span class="line">	<span class="string">"msg"</span>: <span class="string">"登录成功!"</span>,</span><br><span class="line">	<span class="string">"data"</span>: &#123;</span><br><span class="line">		<span class="string">"token"</span>: <span class="string">"4baf601b78ebbc99a29bd97d604de65c879afc7e091b7ea209e3eb5f4e1aabee"</span>,</span><br><span class="line">		<span class="string">"user"</span>: &#123;</span><br><span class="line">			<span class="string">"id"</span>: <span class="number">2215</span>,</span><br><span class="line">			<span class="string">"mobile"</span>: <span class="string">"+86-13226349780"</span>,</span><br><span class="line">			<span class="string">"user_email"</span>: <span class="string">""</span>,</span><br><span class="line">			<span class="string">"user_type"</span>: <span class="number">2</span>,</span><br><span class="line">			<span class="string">"user_login"</span>: <span class="string">""</span>,</span><br><span class="line">			<span class="string">"user_name"</span>: <span class="string">""</span>,</span><br><span class="line">			<span class="string">"user_nickname"</span>: <span class="string">"+8****2263"</span>,</span><br><span class="line">			<span class="string">"qq_openid"</span>: null,</span><br><span class="line">			<span class="string">"weibo_openid"</span>: null,</span><br><span class="line">			<span class="string">"weixin_unionid"</span>: null,</span><br><span class="line">			<span class="string">"sex"</span>: <span class="number">0</span>,</span><br><span class="line">			<span class="string">"birthday"</span>: <span class="number">0</span>,</span><br><span class="line">			<span class="string">"score"</span>: <span class="number">0</span>,</span><br><span class="line">			<span class="string">"balance"</span>: <span class="string">"0.00"</span>,</span><br><span class="line">			<span class="string">"user_status"</span>: <span class="number">1</span>,</span><br><span class="line">			<span class="string">"avatar"</span>: <span class="string">"https:\/\/elitelive.oss-cn-shenzhen.aliyuncs.com\/default\/avatar\/1.png"</span>,</span><br><span class="line">			<span class="string">"signature"</span>: <span class="string">""</span>,</span><br><span class="line">			<span class="string">"last_login_ip"</span>: <span class="string">"219.137.186.204"</span>,</span><br><span class="line">			<span class="string">"unique"</span>: <span class="string">"74f6f5718db0cd3d6f9fce8c8e8981f9"</span>,</span><br><span class="line">			<span class="string">"im_token"</span>: <span class="string">"29266c5c935fdf4866a71458874cbe89"</span>,</span><br><span class="line">			<span class="string">"more"</span>: [],</span><br><span class="line">			<span class="string">"from_device_type"</span>: <span class="string">"web"</span>,</span><br><span class="line">			<span class="string">"last_login_time"</span>: <span class="number">1557851794</span>,</span><br><span class="line">			<span class="string">"create_time"</span>: <span class="number">1556443720</span>,</span><br><span class="line">			<span class="string">"update_time"</span>: <span class="number">1557851794</span>,</span><br><span class="line">			<span class="string">"delete_time"</span>: null,</span><br><span class="line">			<span class="string">"wx_pay_openid"</span>: null,</span><br><span class="line">			<span class="string">"has_company"</span>: <span class="number">1</span>,</span><br><span class="line">			<span class="string">"company_id"</span>: <span class="number">148</span>,</span><br><span class="line">			<span class="string">"company_name"</span>: <span class="string">"lqf"</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;,</span><br><span class="line">	<span class="string">"runtime"</span>: <span class="number">0.13</span>,</span><br><span class="line">	<span class="string">"time"</span>: <span class="number">1557851968</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>接口测试：</p>
-<p><img src="自动化测试-持续集成/接口测试.png" alt=""></p>
-<p>B：提高自动化的可信度<br>1，失败重试机制<br>2，自动化场景用例设计依据测试用例（完善场景)<br>3，及时更新自动化用例<br>4，更好的协作（自动化与手工相互补充，减少重复劳动）<br>5，每天定时构建。</p>
-<p>C.自动化并没有解放我们？<br>自动化与ci结合。<br>场景：<br>这里没改过啊，怎么出错了？不知道是哪一次提交影响到了</p>
-<p>什么是持续集成？<br>持续集成强调开发人员提交了新代码之后，立刻进行构建、（单元）测试。根据测试结果，我们可以确定新代码和原有代码能否正确地集成在一起</p>
-<p>价值？<br>(1) 减小风险（快速发现错误）；(2) 减少手动过程；(3) 生成构建结果；</p>
-<p>成本？<br>持续集成的成本在于对持续集成代码的维护成本和集成的时间成本。因为随着项目进行，软硬件环境会越来越复杂，成品代码也会不断膨胀。此时，需要团队而修改或增加原有的测试代码，以适应这些变化，同时，每次集成所需时间也会变长，这就是持续集成的成本。</p>
-<p>持续集成应该自动化什么呢？<br>1.自动产生可部署的成品（android包，或者iOS包，或者docker镜像）<br>2.自动将成品部署到环境中去<br>3.自动的回归测试<br>4.自动生成报告</p>
-<p><img src="自动化测试-持续集成/ci.png" alt=""></p>
-<p>选择一个ci平台？<br>Jenkins。<br><img src="自动化测试-持续集成/jenkins.png" alt="jenkins"></p>
-<p>Jenkins是一个独立的开源自动化服务器，可用于自动执行与构建，测试，交付或部署软件相关的各种任务。<br>打包：<br><img src="自动化测试-持续集成/自动打包.png" alt="自动打包"></p>
-<p>场景：昨天这个功能还是好的，今天怎么就出错了？（也可能是不知道什么就出错了）<br>定时测试：<br><img src="自动化测试-持续集成/定时测试.png" alt="自动测试"></p>
-<p>场景：需要手动更新平台代码。需要在电脑前等待</p>
-<p>部署-测试-结果<br><img src="自动化测试-持续集成/部署.png" alt="部署">  </p>
-<p><img src="自动化测试-持续集成/报告.png" alt="报告">  </p>
-<p><img src="自动化测试-持续集成/报告-1.png" alt="报告-1"></p>
-<p>以及消息通知：<br><img src="自动化测试-持续集成/通知.png" alt="通知">  </p>
-<p>未完：持续交付</p>
--->
+        <hr>
+<p>title: 自动化测试&amp;持续集成<br>date: 2019-12-12 10:31:09</p>
+<h2 id="tags-随笔"><a href="#tags-随笔" class="headerlink" title="tags: 随笔"></a>tags: 随笔</h2><p>1.问题思考<br>A.什么是自动化？自动化分为哪几个？<br>B.自动化测试是不是可信？<br>C.自动化并没有解放我们？</p>
+<p>A.1:<br>“手工测试”：<br>如图可以，手工测试就是手动地去遍历被测软件的所有功能。<br><img src="/luoqingfu/2019/12/12/自动化测试-持续集成/hand.png" alt=""><br></p>
+        
+          <a class="article-more-a" href="/2019/12/12/自动化测试-持续集成/#more">more >></a>
+        
       
 
       
@@ -253,17 +161,6 @@ target_type | string | 是 | 账号类型 | 无 | 1（手机号码）
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
