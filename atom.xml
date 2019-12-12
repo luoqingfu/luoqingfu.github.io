@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/luoqingfu/"/>
-  <updated>2019-03-12T10:17:32.626Z</updated>
+  <updated>2019-12-12T06:21:10.150Z</updated>
   <id>https://github.com/luoqingfu/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>自动化测试&amp;持续集成</title>
+    <link href="https://github.com/luoqingfu/2019/12/12/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95-%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90/"/>
+    <id>https://github.com/luoqingfu/2019/12/12/自动化测试-持续集成/</id>
+    <published>2019-12-12T02:31:09.000Z</published>
+    <updated>2019-12-12T06:21:10.150Z</updated>
+    
+    <content type="html"><![CDATA[<p>1.问题思考<br>A.什么是自动化？自动化分为哪几个？<br>B.自动化测试是不是可信？<br>C.自动化并没有解放我们？</p><p>A.1:<br>“手工测试”：<br>如图可以，手工测试就是手动地去遍历被测软件的所有功能。<br><img src="/luoqingfu/2019/12/12/自动化测试-持续集成/hand.png" alt=""></p><p>自动化测试：<br>自动化测试就是让被测试的软件自己运行起来，执行软件的功能。</p><p>实际上我们所说的自动化测试就是通过编写一点的脚本，让被测程序按照编写好的路径遍历功能</p><p>事实上，自动化测试覆盖了从 UI （功能测试）到接口测试以及单元测试的整个过程，要想很好的掌握自动化测试，那么的确需要以下三种领域的经验积累：<br>编程语言，面向对象编程优先，因为大量的开源技术方案，都是基于面向对象的编程方式<br>第三方测试工具和测试框架，这些主要通过官网的文档学习<br>测试的理念与设计，工具和语言，只是测试的手段，如何准备测试数据，如何设置测试的检查点与测试步骤，这些决定了测试的成败</p><p>1，UI自动化（以selenium2为例）<br>多浏览器支持<br>多语言支持<br>多操作系统支持<br>开源免费</p><p>1，脚本运行之后打开指定的浏览起，接收测试脚本的命令<br>2，webdriver操作浏览器（通过浏览器的原生组件，转化webserver命令为浏览器调用）<br>3，用户操作web application过程</p><p>手动功能测试：<br>1.打开浏览器，输入网址<br>2.找到账号输入框输入账号<br>3.找到密码输入框输入密码<br>4.点击登录按钮<br>5.判断是否登录成功<br>自动化测试<br>最小测试case</p><p>以及修改后只关心流程的代码</p><p>测试报告</p><p>接口测试：<br>接口文档：<br>接口简介：<br>用户登录英荔播客平台<br>接口地址：<br><a href="https://yingliboke.cn/api/account/login" target="_blank" rel="noopener">https://yingliboke.cn/api/account/login</a><br>请求类型：<br>post<br>请求参数<br>参数名            类型    必填        描述        默认值        参考值<br>device_type        string    是        设备类型                    web<br>token            string    是        token值        空            空<br>company_id        string     是        组织id        空            空<br>target            string     是        账号        无            13226349780<br>password        string    是        密码        无            123456<br>target_type        string    是        账号类型        无            1（手机号码）<br>返回正确json示例<br>{<br>    “code”: 1,<br>    “msg”: “登录成功!”,<br>    “data”: {<br>        “token”: “4baf601b78ebbc99a29bd97d604de65c879afc7e091b7ea209e3eb5f4e1aabee”,<br>        “user”: {<br>            “id”: 2215,<br>            “mobile”: “+86-13226349780”,<br>            “user_email”: “”,<br>            “user_type”: 2,<br>            “user_login”: “”,<br>            “user_name”: “”,<br>            “user_nickname”: “+8<em>**</em>2263”,<br>            “qq_openid”: null,<br>            “weibo_openid”: null,<br>            “weixin_unionid”: null,<br>            “sex”: 0,<br>            “birthday”: 0,<br>            “score”: 0,<br>            “balance”: “0.00”,<br>            “user_status”: 1,<br>            “avatar”: “https:\/\/elitelive.oss-cn-shenzhen.aliyuncs.com\/default\/avatar\/1.png”,<br>            “signature”: “”,<br>            “last_login_ip”: “219.137.186.204”,<br>            “unique”: “74f6f5718db0cd3d6f9fce8c8e8981f9”,<br>            “im_token”: “29266c5c935fdf4866a71458874cbe89”,<br>            “more”: [],<br>            “from_device_type”: “web”,<br>            “last_login_time”: 1557851794,<br>            “create_time”: 1556443720,<br>            “update_time”: 1557851794,<br>            “delete_time”: null,<br>            “wx_pay_openid”: null,<br>            “has_company”: 1,<br>            “company_id”: 148,<br>            “company_name”: “lqf”<br>        }<br>    },<br>    “runtime”: 0.13,<br>    “time”: 1557851968<br>}<br>接口测试：</p><p>B：提高自动化的可信度<br>1，失败重试机制<br>2，自动化场景用例设计依据测试用例（完善场景)<br>3，及时更新自动化用例<br>4，更好的协作（自动化与手工相互补充，减少重复劳动）<br>5，每天定时构建。</p><p>C.自动化并没有解放我们？<br>自动化与ci结合。<br>场景：<br>这里没改过啊，怎么出错了？不知道是哪一次提交影响到了</p><p>什么是持续集成？<br>持续集成强调开发人员提交了新代码之后，立刻进行构建、（单元）测试。根据测试结果，我们可以确定新代码和原有代码能否正确地集成在一起</p><p>价值？<br>(1) 减小风险（快速发现错误）；(2) 减少手动过程；(3) 生成构建结果；</p><p>成本？<br>持续集成的成本在于对持续集成代码的维护成本和集成的时间成本。因为随着项目进行，软硬件环境会越来越复杂，成品代码也会不断膨胀。此时，需要团队而修改或增加原有的测试代码，以适应这些变化，同时，每次集成所需时间也会变长，这就是持续集成的成本。</p><p>持续集成应该自动化什么呢？<br>1.自动产生可部署的成品（android包，或者iOS包，或者docker镜像）<br>2.自动将成品部署到环境中去<br>3.自动的回归测试<br>4.自动生成报告</p><p>选择一个ci平台？<br>Jenkins。</p><p>Jenkins是一个独立的开源自动化服务器，可用于自动执行与构建，测试，交付或部署软件相关的各种任务。<br>打包：</p><p>场景：昨天这个功能还是好的，今天怎么就出错了？（也可能是不知道什么就出错了）<br>定时测试：</p><p>场景：需要手动更新平台代码。需要在电脑前等待</p><p>部署-测试-结果</p><p>以及消息通知：</p><p>未完：持续交付</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;1.问题思考&lt;br&gt;A.什么是自动化？自动化分为哪几个？&lt;br&gt;B.自动化测试是不是可信？&lt;br&gt;C.自动化并没有解放我们？&lt;/p&gt;
+&lt;p&gt;A.1:&lt;br&gt;“手工测试”：&lt;br&gt;如图可以，手工测试就是手动地去遍历被测软件的所有功能。&lt;br&gt;&lt;img src=&quot;/luoqin
+      
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="https://github.com/luoqingfu/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>circle初探</title>
@@ -57,7 +81,7 @@
       &lt;p&gt;赋值语句：&lt;br&gt;var x = 1;&lt;br&gt;使用；表示语句结束一下为两个语句：&lt;br&gt;var x = 1; var y = 2;&lt;br&gt;语句块：&lt;br&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; &amp;gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    x = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    y = &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    z = &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;h4 id=&quot;数据类型和变量&quot;&gt;&lt;a href=&quot;#数据类型和变量&quot; class=&quot;headerlink&quot; title=&quot;数据类型和变量&quot;&gt;&lt;/a&gt;数据类型和变量&lt;/h4&gt;&lt;p&gt;Number&lt;br&gt;JavaScript不区分整数和浮点数，统一用Number表示，以下都是合法的Number类型：&lt;br&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;123&lt;/span&gt;; &lt;span class=&quot;comment&quot;&gt;// 整数123&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;0.456&lt;/span&gt;; &lt;span class=&quot;comment&quot;&gt;// 浮点数0.456&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;1.2345e3&lt;/span&gt;; &lt;span class=&quot;comment&quot;&gt;// 科学计数法表示1.2345x1000，等同于1234.5&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;-99&lt;/span&gt;; &lt;span class=&quot;comment&quot;&gt;// 负数&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;literal&quot;&gt;NaN&lt;/span&gt;; &lt;span class=&quot;comment&quot;&gt;// NaN表示Not a Number，当无法计算结果时用NaN表示&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;literal&quot;&gt;Infinity&lt;/span&gt;; &lt;span class=&quot;comment&quot;&gt;// Infinity表示无限大，当数值超过了JavaScript的Number所能表示的最大值时，就表示为Infinity&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;Number可以直接做四则运算，规则和数学一致：&lt;br&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; + &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;; &lt;span class=&quot;comment&quot;&gt;// 3&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; + &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;) * &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt; / &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;; &lt;span class=&quot;comment&quot;&gt;// 7.5&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; / &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; &lt;span class=&quot;comment&quot;&gt;// Infinity&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; / &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; &lt;span class=&quot;comment&quot;&gt;// NaN&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt; % &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;; &lt;span class=&quot;comment&quot;&gt;// 1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;10.5&lt;/span&gt; % &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;; &lt;span class=&quot;comment&quot;&gt;// 1.5&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;h4 id=&quot;字符串&quot;&gt;&lt;a href=&quot;#字符串&quot; class=&quot;headerlink&quot; title=&quot;字符串&quot;&gt;&lt;/a&gt;字符串&lt;/h4&gt;&lt;p&gt;字符串是以单引号’或双引号”括起来的任意文本，比如’abc’，”xyz”等等。请注意，’’或””本身只是一种表示方式，不是字符串的一部分，因此，字符串’abc’只有a，b，c这3个字符。&lt;br&gt;
+&lt;h4 id=&quot;字符串&quot;&gt;&lt;a href=&quot;#字符串&quot; class=&quot;headerlink&quot; title=&quot;字符串&quot;&gt;&lt;/a&gt;字符串&lt;/h4&gt;&lt;p&gt;字符串是以单引号’或双引号”括起来的任意文本，比如’abc’，”xyz”等等。请注意，’’或””本身只是一种表示方式，不是字符串的一部分，因此，字符串’abc’只有a，b，c这3个字符。&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
@@ -129,7 +153,7 @@
 &lt;li&gt;–help 使用帮助文档例如：ls –help  &lt;/li&gt;
 &lt;li&gt;tab自动补全，两次tab显示全部可以不全内容&lt;/li&gt;
 &lt;li&gt;touch+文件名，新增文件，cat+文件名，显示文件内容&lt;/li&gt;
-&lt;li&gt;history 查看命令的历史记录
+&lt;li&gt;history 查看命令的历史记录&lt;/li&gt;&lt;/ol&gt;
     
     </summary>
     
@@ -200,7 +224,7 @@
 &lt;li&gt;如果 “condition_1”为True将执行”statement_block_1” 块语句&lt;/li&gt;
 &lt;li&gt;如果 “condition_1” 为False，将判断 “condition_2”&lt;/li&gt;
 &lt;li&gt;如果”condition_2” 为 True 将执行 “statement_block_2” 块语句&lt;/li&gt;
-&lt;li&gt;如果 “condition_2” 为False，将执行”statement_block_3”块语句&lt;br&gt;实例：
+&lt;li&gt;如果 “condition_2” 为False，将执行”statement_block_3”块语句&lt;br&gt;实例：&lt;/li&gt;&lt;/ul&gt;
     
     </summary>
     
@@ -222,7 +246,7 @@
     
       &lt;h3 id=&quot;Python3-基本数据类型&quot;&gt;&lt;a href=&quot;#Python3-基本数据类型&quot; class=&quot;headerlink&quot; title=&quot;Python3 基本数据类型&quot;&gt;&lt;/a&gt;Python3 基本数据类型&lt;/h3&gt;&lt;p&gt;python中的变量不需要声明。每个变量在使用前都必须赋值，变量被赋值以后才会被创建。在Python中，变量就是变量，它没有类型，我们所说的类型是指内存中对象的类型。&lt;br&gt;等号（=）用来给变量赋值等号左边是一个变量名，右边是变量的值。&lt;br&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;counter = &lt;span class=&quot;number&quot;&gt;100&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;miles = &lt;span class=&quot;number&quot;&gt;100.0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;name = &lt;span class=&quot;string&quot;&gt;&quot;lqf&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;h4 id=&quot;多个变量赋值&quot;&gt;&lt;a href=&quot;#多个变量赋值&quot; class=&quot;headerlink&quot; title=&quot;多个变量赋值&quot;&gt;&lt;/a&gt;多个变量赋值&lt;/h4&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;a = b = c = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;以上3个变量都指向同一个内存位置&lt;br&gt;
+&lt;p&gt;以上3个变量都指向同一个内存位置&lt;br&gt;&lt;/p&gt;
     
     </summary>
     

@@ -6,15 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/luoqingfu">
-  <title>lqf的随手笔记</title>
+  <title>自动化测试&amp;持续集成 | lqf的随手笔记</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="lqf的随手笔记">
-<meta property="og:url" content="https://github.com/luoqingfu/page/2/index.html">
+  <meta name="description" content="1.问题思考A.什么是自动化？自动化分为哪几个？B.自动化测试是不是可信？C.自动化并没有解放我们？ A.1:“手工测试”：如图可以，手工测试就是手动地去遍历被测软件的所有功能。 自动化测试：自动化测试就是让被测试的软件自己运行起来，执行软件的功能。 实际上我们所说的自动化测试就是通过编写一点的脚本，让被测程序按照编写好的路径遍历功能 事实上，自动化测试覆盖了从 UI （功能测试）到接口测试以及单">
+<meta name="keywords" content="随笔">
+<meta property="og:type" content="article">
+<meta property="og:title" content="自动化测试&amp;持续集成">
+<meta property="og:url" content="https://github.com/luoqingfu/2019/12/12/自动化测试-持续集成/index.html">
 <meta property="og:site_name" content="lqf的随手笔记">
+<meta property="og:description" content="1.问题思考A.什么是自动化？自动化分为哪几个？B.自动化测试是不是可信？C.自动化并没有解放我们？ A.1:“手工测试”：如图可以，手工测试就是手动地去遍历被测软件的所有功能。 自动化测试：自动化测试就是让被测试的软件自己运行起来，执行软件的功能。 实际上我们所说的自动化测试就是通过编写一点的脚本，让被测程序按照编写好的路径遍历功能 事实上，自动化测试覆盖了从 UI （功能测试）到接口测试以及单">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://github.com/luoqingfu/2019/12/12/自动化测试-持续集成/hand.png">
+<meta property="og:updated_time" content="2019-12-12T06:21:10.150Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="lqf的随手笔记">
+<meta name="twitter:title" content="自动化测试&amp;持续集成">
+<meta name="twitter:description" content="1.问题思考A.什么是自动化？自动化分为哪几个？B.自动化测试是不是可信？C.自动化并没有解放我们？ A.1:“手工测试”：如图可以，手工测试就是手动地去遍历被测软件的所有功能。 自动化测试：自动化测试就是让被测试的软件自己运行起来，执行软件的功能。 实际上我们所说的自动化测试就是通过编写一点的脚本，让被测程序按照编写好的路径遍历功能 事实上，自动化测试覆盖了从 UI （功能测试）到接口测试以及单">
+<meta name="twitter:image" content="https://github.com/luoqingfu/2019/12/12/自动化测试-持续集成/hand.png">
   
     <link rel="alternative" href="/atom.xml" title="lqf的随手笔记" type="application/atom+xml">
   
@@ -140,125 +147,51 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-python入门笔记01" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-自动化测试-持续集成" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/06/python入门笔记01/">python入门笔记01</a>
+    <h1 class="article-title" itemprop="name">
+      自动化测试&amp;持续集成
     </h1>
   
 
         
-        <a href="/2018/08/06/python入门笔记01/" class="archive-article-date">
-  	<time datetime="2018-08-06T03:23:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-06</time>
+        <a href="/2019/12/12/自动化测试-持续集成/" class="archive-article-date">
+  	<time datetime="2019-12-12T02:31:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-12</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="第一行代码："><a href="#第一行代码：" class="headerlink" title="第一行代码："></a>第一行代码：<br></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">print</span>（<span class="string">"Hello,World!"</span>）</span><br><span class="line">``` </span><br><span class="line">默认情况，python3以UTF<span class="number">-8</span>编码，所有的字符串都是unicode字符串</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"><span class="comment">#### python保留字：</span></span><br><span class="line">保留字就是关键字，我们不能使用，查看关键字：</span><br><span class="line">```python</span><br><span class="line">&gt;&gt;<span class="keyword">import</span> keyword</span><br><span class="line">&gt;&gt;keyword.kwlist</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2018/08/06/python入门笔记01/#more">more >></a>
-        
-      
+        <p>1.问题思考<br>A.什么是自动化？自动化分为哪几个？<br>B.自动化测试是不是可信？<br>C.自动化并没有解放我们？</p>
+<p>A.1:<br>“手工测试”：<br>如图可以，手工测试就是手动地去遍历被测软件的所有功能。<br><img src="/luoqingfu/2019/12/12/自动化测试-持续集成/hand.png" alt=""></p>
+<p>自动化测试：<br>自动化测试就是让被测试的软件自己运行起来，执行软件的功能。</p>
+<p>实际上我们所说的自动化测试就是通过编写一点的脚本，让被测程序按照编写好的路径遍历功能</p>
+<p>事实上，自动化测试覆盖了从 UI （功能测试）到接口测试以及单元测试的整个过程，要想很好的掌握自动化测试，那么的确需要以下三种领域的经验积累：<br>编程语言，面向对象编程优先，因为大量的开源技术方案，都是基于面向对象的编程方式<br>第三方测试工具和测试框架，这些主要通过官网的文档学习<br>测试的理念与设计，工具和语言，只是测试的手段，如何准备测试数据，如何设置测试的检查点与测试步骤，这些决定了测试的成败</p>
+<p>1，UI自动化（以selenium2为例）<br>多浏览器支持<br>多语言支持<br>多操作系统支持<br>开源免费</p>
+<p>1，脚本运行之后打开指定的浏览起，接收测试脚本的命令<br>2，webdriver操作浏览器（通过浏览器的原生组件，转化webserver命令为浏览器调用）<br>3，用户操作web application过程</p>
+<p>手动功能测试：<br>1.打开浏览器，输入网址<br>2.找到账号输入框输入账号<br>3.找到密码输入框输入密码<br>4.点击登录按钮<br>5.判断是否登录成功<br>自动化测试<br>最小测试case</p>
+<p>以及修改后只关心流程的代码</p>
+<p>测试报告</p>
+<p>接口测试：<br>接口文档：<br>接口简介：<br>用户登录英荔播客平台<br>接口地址：<br><a href="https://yingliboke.cn/api/account/login" target="_blank" rel="noopener">https://yingliboke.cn/api/account/login</a><br>请求类型：<br>post<br>请求参数<br>参数名            类型    必填        描述        默认值        参考值<br>device_type        string    是        设备类型                    web<br>token            string    是        token值        空            空<br>company_id        string     是        组织id        空            空<br>target            string     是        账号        无            13226349780<br>password        string    是        密码        无            123456<br>target_type        string    是        账号类型        无            1（手机号码）<br>返回正确json示例<br>{<br>    “code”: 1,<br>    “msg”: “登录成功!”,<br>    “data”: {<br>        “token”: “4baf601b78ebbc99a29bd97d604de65c879afc7e091b7ea209e3eb5f4e1aabee”,<br>        “user”: {<br>            “id”: 2215,<br>            “mobile”: “+86-13226349780”,<br>            “user_email”: “”,<br>            “user_type”: 2,<br>            “user_login”: “”,<br>            “user_name”: “”,<br>            “user_nickname”: “+8<em>**</em>2263”,<br>            “qq_openid”: null,<br>            “weibo_openid”: null,<br>            “weixin_unionid”: null,<br>            “sex”: 0,<br>            “birthday”: 0,<br>            “score”: 0,<br>            “balance”: “0.00”,<br>            “user_status”: 1,<br>            “avatar”: “https:\/\/elitelive.oss-cn-shenzhen.aliyuncs.com\/default\/avatar\/1.png”,<br>            “signature”: “”,<br>            “last_login_ip”: “219.137.186.204”,<br>            “unique”: “74f6f5718db0cd3d6f9fce8c8e8981f9”,<br>            “im_token”: “29266c5c935fdf4866a71458874cbe89”,<br>            “more”: [],<br>            “from_device_type”: “web”,<br>            “last_login_time”: 1557851794,<br>            “create_time”: 1556443720,<br>            “update_time”: 1557851794,<br>            “delete_time”: null,<br>            “wx_pay_openid”: null,<br>            “has_company”: 1,<br>            “company_id”: 148,<br>            “company_name”: “lqf”<br>        }<br>    },<br>    “runtime”: 0.13,<br>    “time”: 1557851968<br>}<br>接口测试：</p>
+<p>B：提高自动化的可信度<br>1，失败重试机制<br>2，自动化场景用例设计依据测试用例（完善场景)<br>3，及时更新自动化用例<br>4，更好的协作（自动化与手工相互补充，减少重复劳动）<br>5，每天定时构建。</p>
+<p>C.自动化并没有解放我们？<br>自动化与ci结合。<br>场景：<br>这里没改过啊，怎么出错了？不知道是哪一次提交影响到了</p>
+<p>什么是持续集成？<br>持续集成强调开发人员提交了新代码之后，立刻进行构建、（单元）测试。根据测试结果，我们可以确定新代码和原有代码能否正确地集成在一起</p>
+<p>价值？<br>(1) 减小风险（快速发现错误）；(2) 减少手动过程；(3) 生成构建结果；</p>
+<p>成本？<br>持续集成的成本在于对持续集成代码的维护成本和集成的时间成本。因为随着项目进行，软硬件环境会越来越复杂，成品代码也会不断膨胀。此时，需要团队而修改或增加原有的测试代码，以适应这些变化，同时，每次集成所需时间也会变长，这就是持续集成的成本。</p>
+<p>持续集成应该自动化什么呢？<br>1.自动产生可部署的成品（android包，或者iOS包，或者docker镜像）<br>2.自动将成品部署到环境中去<br>3.自动的回归测试<br>4.自动生成报告</p>
+<p>选择一个ci平台？<br>Jenkins。</p>
+<p>Jenkins是一个独立的开源自动化服务器，可用于自动执行与构建，测试，交付或部署软件相关的各种任务。<br>打包：</p>
+<p>场景：昨天这个功能还是好的，今天怎么就出错了？（也可能是不知道什么就出错了）<br>定时测试：</p>
+<p>场景：需要手动更新平台代码。需要在电脑前等待</p>
+<p>部署-测试-结果</p>
+<p>以及消息通知：</p>
+<p>未完：持续交付</p>
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">python入门笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/06/python入门笔记01/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-自动化平台测试开发笔记（1）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/04/自动化平台测试开发笔记（1）/">自动化平台测试开发笔记（1）</a>
-    </h1>
-  
-
-        
-        <a href="/2018/08/04/自动化平台测试开发笔记（1）/" class="archive-article-date">
-  	<time datetime="2018-08-04T11:48:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="django"><a href="#django" class="headerlink" title="django"></a>django</h3><p>查看django版本<br>import django<br>django.get_version()  </p>
-<h3 id="创建一个Django项目"><a href="#创建一个Django项目" class="headerlink" title="创建一个Django项目"></a>创建一个Django项目</h3><p>django-admin startproject 工程名  </p>
-<h4 id="迁移数据"><a href="#迁移数据" class="headerlink" title="迁移数据"></a>迁移数据</h4><p>python manage.py migrate</p>
-<h4 id="创建超级用户"><a href="#创建超级用户" class="headerlink" title="创建超级用户"></a>创建超级用户</h4><p>python manage.py createsuperuser<br>用户名为：admin<br>邮箱：<a href="mailto:746832476@qq.com" target="_blank" rel="noopener">746832476@qq.com</a><br>密码：123456</p>
-<h4 id="创建apitest项目"><a href="#创建apitest项目" class="headerlink" title="创建apitest项目"></a>创建apitest项目</h4><p>python manage.py startapp apitest  </p>
-<ul>
-<li>创建视图</li>
-<li>创建映射</li>
-<li>创建templates文件夹</li>
-<li>创建login.html</li>
-<li>写入映射</li>
-<li></li>
-</ul>
-<hr>
-<p> mac系统 MySQL 8.0.11版本，安装成功，使用Navicat连接失败</p>
-<p>MySQL安装成功之后，使用navicat连接失败，报错如下：</p>
-<p>　　</p>
-<p>2059 - Authentication plugin ‘caching_sha2_password’ cannot be loaded: dlopen(../Frameworks/caching_sha2_password.so, 2): image not found</p>
-        
-          <a class="article-more-a" href="/2018/08/04/自动化平台测试开发笔记（1）/#more">more >></a>
-        
       
 
       
@@ -280,16 +213,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/04/自动化平台测试开发笔记（1）/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://github.com/luoqingfu/2019/12/12/自动化测试-持续集成/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2019/03/12/circle初探/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">circle初探</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -309,12 +301,14 @@
 
 
 
+  
+  
+  
 
   
+
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
+
   
 
 
@@ -337,8 +331,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

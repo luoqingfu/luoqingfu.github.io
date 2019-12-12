@@ -142,6 +142,103 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-自动化测试-持续集成" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/12/自动化测试-持续集成/">自动化测试&amp;持续集成</a>
+    </h1>
+  
+
+        
+        <a href="/2019/12/12/自动化测试-持续集成/" class="archive-article-date">
+  	<time datetime="2019-12-12T02:31:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.问题思考<br>A.什么是自动化？自动化分为哪几个？<br>B.自动化测试是不是可信？<br>C.自动化并没有解放我们？</p>
+<p>A.1:<br>“手工测试”：<br>如图可以，手工测试就是手动地去遍历被测软件的所有功能。<br><img src="/luoqingfu/2019/12/12/自动化测试-持续集成/hand.png" alt=""></p>
+<p>自动化测试：<br>自动化测试就是让被测试的软件自己运行起来，执行软件的功能。</p>
+<p>实际上我们所说的自动化测试就是通过编写一点的脚本，让被测程序按照编写好的路径遍历功能</p>
+<p>事实上，自动化测试覆盖了从 UI （功能测试）到接口测试以及单元测试的整个过程，要想很好的掌握自动化测试，那么的确需要以下三种领域的经验积累：<br>编程语言，面向对象编程优先，因为大量的开源技术方案，都是基于面向对象的编程方式<br>第三方测试工具和测试框架，这些主要通过官网的文档学习<br>测试的理念与设计，工具和语言，只是测试的手段，如何准备测试数据，如何设置测试的检查点与测试步骤，这些决定了测试的成败</p>
+<p>1，UI自动化（以selenium2为例）<br>多浏览器支持<br>多语言支持<br>多操作系统支持<br>开源免费</p>
+<p>1，脚本运行之后打开指定的浏览起，接收测试脚本的命令<br>2，webdriver操作浏览器（通过浏览器的原生组件，转化webserver命令为浏览器调用）<br>3，用户操作web application过程</p>
+<p>手动功能测试：<br>1.打开浏览器，输入网址<br>2.找到账号输入框输入账号<br>3.找到密码输入框输入密码<br>4.点击登录按钮<br>5.判断是否登录成功<br>自动化测试<br>最小测试case</p>
+<p>以及修改后只关心流程的代码</p>
+<p>测试报告</p>
+<p>接口测试：<br>接口文档：<br>接口简介：<br>用户登录英荔播客平台<br>接口地址：<br><a href="https://yingliboke.cn/api/account/login" target="_blank" rel="noopener">https://yingliboke.cn/api/account/login</a><br>请求类型：<br>post<br>请求参数<br>参数名            类型    必填        描述        默认值        参考值<br>device_type        string    是        设备类型                    web<br>token            string    是        token值        空            空<br>company_id        string     是        组织id        空            空<br>target            string     是        账号        无            13226349780<br>password        string    是        密码        无            123456<br>target_type        string    是        账号类型        无            1（手机号码）<br>返回正确json示例<br>{<br>    “code”: 1,<br>    “msg”: “登录成功!”,<br>    “data”: {<br>        “token”: “4baf601b78ebbc99a29bd97d604de65c879afc7e091b7ea209e3eb5f4e1aabee”,<br>        “user”: {<br>            “id”: 2215,<br>            “mobile”: “+86-13226349780”,<br>            “user_email”: “”,<br>            “user_type”: 2,<br>            “user_login”: “”,<br>            “user_name”: “”,<br>            “user_nickname”: “+8<em>**</em>2263”,<br>            “qq_openid”: null,<br>            “weibo_openid”: null,<br>            “weixin_unionid”: null,<br>            “sex”: 0,<br>            “birthday”: 0,<br>            “score”: 0,<br>            “balance”: “0.00”,<br>            “user_status”: 1,<br>            “avatar”: “https:\/\/elitelive.oss-cn-shenzhen.aliyuncs.com\/default\/avatar\/1.png”,<br>            “signature”: “”,<br>            “last_login_ip”: “219.137.186.204”,<br>            “unique”: “74f6f5718db0cd3d6f9fce8c8e8981f9”,<br>            “im_token”: “29266c5c935fdf4866a71458874cbe89”,<br>            “more”: [],<br>            “from_device_type”: “web”,<br>            “last_login_time”: 1557851794,<br>            “create_time”: 1556443720,<br>            “update_time”: 1557851794,<br>            “delete_time”: null,<br>            “wx_pay_openid”: null,<br>            “has_company”: 1,<br>            “company_id”: 148,<br>            “company_name”: “lqf”<br>        }<br>    },<br>    “runtime”: 0.13,<br>    “time”: 1557851968<br>}<br>接口测试：</p>
+<p>B：提高自动化的可信度<br>1，失败重试机制<br>2，自动化场景用例设计依据测试用例（完善场景)<br>3，及时更新自动化用例<br>4，更好的协作（自动化与手工相互补充，减少重复劳动）<br>5，每天定时构建。</p>
+<p>C.自动化并没有解放我们？<br>自动化与ci结合。<br>场景：<br>这里没改过啊，怎么出错了？不知道是哪一次提交影响到了</p>
+<p>什么是持续集成？<br>持续集成强调开发人员提交了新代码之后，立刻进行构建、（单元）测试。根据测试结果，我们可以确定新代码和原有代码能否正确地集成在一起</p>
+<p>价值？<br>(1) 减小风险（快速发现错误）；(2) 减少手动过程；(3) 生成构建结果；</p>
+<p>成本？<br>持续集成的成本在于对持续集成代码的维护成本和集成的时间成本。因为随着项目进行，软硬件环境会越来越复杂，成品代码也会不断膨胀。此时，需要团队而修改或增加原有的测试代码，以适应这些变化，同时，每次集成所需时间也会变长，这就是持续集成的成本。</p>
+<p>持续集成应该自动化什么呢？<br>1.自动产生可部署的成品（android包，或者iOS包，或者docker镜像）<br>2.自动将成品部署到环境中去<br>3.自动的回归测试<br>4.自动生成报告</p>
+<p>选择一个ci平台？<br>Jenkins。</p>
+<p>Jenkins是一个独立的开源自动化服务器，可用于自动执行与构建，测试，交付或部署软件相关的各种任务。<br>打包：</p>
+<p>场景：昨天这个功能还是好的，今天怎么就出错了？（也可能是不知道什么就出错了）<br>定时测试：</p>
+<p>场景：需要手动更新平台代码。需要在电脑前等待</p>
+<p>部署-测试-结果</p>
+<p>以及消息通知：</p>
+<p>未完：持续交付</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/12/12/自动化测试-持续集成/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-circle初探" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -248,7 +345,7 @@
         <p>赋值语句：<br>var x = 1;<br>使用；表示语句结束一下为两个语句：<br>var x = 1; var y = 2;<br>语句块：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(<span class="number">2</span> &gt; <span class="number">1</span>)&#123;</span><br><span class="line">    x = <span class="number">1</span>;</span><br><span class="line">    y = <span class="number">2</span>;</span><br><span class="line">    z = <span class="number">3</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h4 id="数据类型和变量"><a href="#数据类型和变量" class="headerlink" title="数据类型和变量"></a>数据类型和变量</h4><p>Number<br>JavaScript不区分整数和浮点数，统一用Number表示，以下都是合法的Number类型：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">123</span>; <span class="comment">// 整数123</span></span><br><span class="line"><span class="number">0.456</span>; <span class="comment">// 浮点数0.456</span></span><br><span class="line"><span class="number">1.2345e3</span>; <span class="comment">// 科学计数法表示1.2345x1000，等同于1234.5</span></span><br><span class="line"><span class="number">-99</span>; <span class="comment">// 负数</span></span><br><span class="line"><span class="literal">NaN</span>; <span class="comment">// NaN表示Not a Number，当无法计算结果时用NaN表示</span></span><br><span class="line"><span class="literal">Infinity</span>; <span class="comment">// Infinity表示无限大，当数值超过了JavaScript的Number所能表示的最大值时，就表示为Infinity</span></span><br></pre></td></tr></table></figure></p>
 <p>Number可以直接做四则运算，规则和数学一致：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> + <span class="number">2</span>; <span class="comment">// 3</span></span><br><span class="line">(<span class="number">1</span> + <span class="number">2</span>) * <span class="number">5</span> / <span class="number">2</span>; <span class="comment">// 7.5</span></span><br><span class="line"><span class="number">2</span> / <span class="number">0</span>; <span class="comment">// Infinity</span></span><br><span class="line"><span class="number">0</span> / <span class="number">0</span>; <span class="comment">// NaN</span></span><br><span class="line"><span class="number">10</span> % <span class="number">3</span>; <span class="comment">// 1</span></span><br><span class="line"><span class="number">10.5</span> % <span class="number">3</span>; <span class="comment">// 1.5</span></span><br></pre></td></tr></table></figure></p>
-<h4 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h4><p>字符串是以单引号’或双引号”括起来的任意文本，比如’abc’，”xyz”等等。请注意，’’或””本身只是一种表示方式，不是字符串的一部分，因此，字符串’abc’只有a，b，c这3个字符。<br>
+<h4 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h4><p>字符串是以单引号’或双引号”括起来的任意文本，比如’abc’，”xyz”等等。请注意，’’或””本身只是一种表示方式，不是字符串的一部分，因此，字符串’abc’只有a，b，c这3个字符。<br></p>
         
           <a class="article-more-a" href="/2019/02/25/js随写/#more">more >></a>
         
@@ -488,7 +585,7 @@
 <li>–help 使用帮助文档例如：ls –help  </li>
 <li>tab自动补全，两次tab显示全部可以不全内容</li>
 <li>touch+文件名，新增文件，cat+文件名，显示文件内容</li>
-<li>history 查看命令的历史记录
+<li>history 查看命令的历史记录</li></ol>
         
           <a class="article-more-a" href="/2018/09/11/Linux基础命令/#more">more >></a>
         
@@ -727,7 +824,7 @@
 <li>如果 “condition_1”为True将执行”statement_block_1” 块语句</li>
 <li>如果 “condition_1” 为False，将判断 “condition_2”</li>
 <li>如果”condition_2” 为 True 将执行 “statement_block_2” 块语句</li>
-<li>如果 “condition_2” 为False，将执行”statement_block_3”块语句<br>实例：
+<li>如果 “condition_2” 为False，将执行”statement_block_3”块语句<br>实例：</li></ul>
         
           <a class="article-more-a" href="/2018/08/06/python入门笔记03/#more">more >></a>
         
@@ -805,7 +902,7 @@
       
         <h3 id="Python3-基本数据类型"><a href="#Python3-基本数据类型" class="headerlink" title="Python3 基本数据类型"></a>Python3 基本数据类型</h3><p>python中的变量不需要声明。每个变量在使用前都必须赋值，变量被赋值以后才会被创建。在Python中，变量就是变量，它没有类型，我们所说的类型是指内存中对象的类型。<br>等号（=）用来给变量赋值等号左边是一个变量名，右边是变量的值。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">counter = <span class="number">100</span></span><br><span class="line">miles = <span class="number">100.0</span></span><br><span class="line">name = <span class="string">"lqf"</span></span><br></pre></td></tr></table></figure></p>
 <h4 id="多个变量赋值"><a href="#多个变量赋值" class="headerlink" title="多个变量赋值"></a>多个变量赋值</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = b = c = <span class="number">1</span></span><br></pre></td></tr></table></figure>
-<p>以上3个变量都指向同一个内存位置<br>
+<p>以上3个变量都指向同一个内存位置<br></p>
         
           <a class="article-more-a" href="/2018/08/06/python入门笔记02/#more">more >></a>
         
@@ -832,82 +929,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/08/06/python入门笔记02/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-python入门笔记01" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/06/python入门笔记01/">python入门笔记01</a>
-    </h1>
-  
-
-        
-        <a href="/2018/08/06/python入门笔记01/" class="archive-article-date">
-  	<time datetime="2018-08-06T03:23:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="第一行代码："><a href="#第一行代码：" class="headerlink" title="第一行代码："></a>第一行代码：<br></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">print</span>（<span class="string">"Hello,World!"</span>）</span><br><span class="line">``` </span><br><span class="line">默认情况，python3以UTF<span class="number">-8</span>编码，所有的字符串都是unicode字符串</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"><span class="comment">#### python保留字：</span></span><br><span class="line">保留字就是关键字，我们不能使用，查看关键字：</span><br><span class="line">```python</span><br><span class="line">&gt;&gt;<span class="keyword">import</span> keyword</span><br><span class="line">&gt;&gt;keyword.kwlist</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2018/08/06/python入门笔记01/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">python入门笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/06/python入门笔记01/">展开全文 >></a>
         </p>
       
 
