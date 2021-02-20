@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="lqf的随手笔记">
 <meta property="og:description" content="adb logcat | grep Display    获取app入口adb shell dumpsys window | grep “mCurrentFocus”  查看应用当前包名adb shell am start  -n (启动的activity的名字)   com.xueqiu.android/.view.WelcomeActivityAlias -S（启动前杀掉已有的进程）adb s">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:updated_time" content="2021-02-20T07:23:25.706Z">
+<meta property="og:updated_time" content="2021-02-20T07:26:12.302Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="adb常用命令">
 <meta name="twitter:description" content="adb logcat | grep Display    获取app入口adb shell dumpsys window | grep “mCurrentFocus”  查看应用当前包名adb shell am start  -n (启动的activity的名字)   com.xueqiu.android/.view.WelcomeActivityAlias -S（启动前杀掉已有的进程）adb s">
@@ -180,7 +180,7 @@
 <li>adb kill-server  </li>
 <li>adb start-server  </li>
 </ul>
-<h4 id="安装-amp-卸载app"><a href="#安装-amp-卸载app" class="headerlink" title="安装&amp;卸载app"></a>安装&amp;卸载app</h4><p>只有一台设备：adb install xxx.apk<br>指定一台设备安装： adb -s xxx install xxx.apk(设备号用 adb devices查看)<br>覆盖安装： adb install -r xxx.apk<br>卸载app： adb uninstall 包名</p>
+<h4 id="安装-amp-卸载app"><a href="#安装-amp-卸载app" class="headerlink" title="安装&amp;卸载app"></a>安装&amp;卸载app</h4><p>只有一台设备：adb install xxx.apk<br>指定一台设备安装： adb -s xxx install xxx.apk(设备号用 adb devices查看)<br>覆盖安装： adb install -r xxx.apk<br>卸载app： adb uninstall 包名<br>adb help 查看帮助</p>
 <h4 id="appium-server-安装"><a href="#appium-server-安装" class="headerlink" title="appium server 安装"></a>appium server 安装</h4><p>npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org(使用淘宝源)" target="_blank" rel="noopener">https://registry.npm.taobao.org(使用淘宝源)</a><br>cnpm install -g appium（安装appium server）<br>npm install appium-doctor -g  </p>
 
       
@@ -253,15 +253,6 @@
 
   
 <nav id="article-nav">
-  
-    <a href="/2021/02/19/adb常用命令2/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          adb常用命令2
-        
-      </div>
-    </a>
   
   
     <a href="/2019/12/12/自动化测试-持续集成/" id="article-nav-older" class="article-nav-link-wrap">
