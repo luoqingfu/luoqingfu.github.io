@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://luoqingfu.site">
   <title>adb常用命令 | lqf的随手笔记</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="adb logcat | grep Display    获取app入口adb shell am start  -n (启动的activity的名字)   com.xueqiu.android/.view.WelcomeActivityAlias -S（启动前杀掉已有的进程）adb shell pm clear com.xueqiu.android (清理指定包的缓存)adb shell “uia">
+  <meta name="description" content="adb logcat | grep Display    获取app入口adb shell dumpsys window | grep “mCurrentFocus”  查看应用当前包名adb shell am start  -n (启动的activity的名字)   com.xueqiu.android/.view.WelcomeActivityAlias -S（启动前杀掉已有的进程）adb s">
 <meta property="og:type" content="article">
 <meta property="og:title" content="adb常用命令">
 <meta property="og:url" content="http://luoqingfu.site/2019/12/14/adb常用命令/index.html">
 <meta property="og:site_name" content="lqf的随手笔记">
-<meta property="og:description" content="adb logcat | grep Display    获取app入口adb shell am start  -n (启动的activity的名字)   com.xueqiu.android/.view.WelcomeActivityAlias -S（启动前杀掉已有的进程）adb shell pm clear com.xueqiu.android (清理指定包的缓存)adb shell “uia">
+<meta property="og:description" content="adb logcat | grep Display    获取app入口adb shell dumpsys window | grep “mCurrentFocus”  查看应用当前包名adb shell am start  -n (启动的activity的名字)   com.xueqiu.android/.view.WelcomeActivityAlias -S（启动前杀掉已有的进程）adb s">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:updated_time" content="2019-12-14T14:50:31.474Z">
+<meta property="og:updated_time" content="2021-02-20T07:23:25.706Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="adb常用命令">
-<meta name="twitter:description" content="adb logcat | grep Display    获取app入口adb shell am start  -n (启动的activity的名字)   com.xueqiu.android/.view.WelcomeActivityAlias -S（启动前杀掉已有的进程）adb shell pm clear com.xueqiu.android (清理指定包的缓存)adb shell “uia">
+<meta name="twitter:description" content="adb logcat | grep Display    获取app入口adb shell dumpsys window | grep “mCurrentFocus”  查看应用当前包名adb shell am start  -n (启动的activity的名字)   com.xueqiu.android/.view.WelcomeActivityAlias -S（启动前杀掉已有的进程）adb s">
   
     <link rel="alternative" href="/atom.xml" title="lqf的随手笔记" type="application/atom+xml">
   
@@ -164,7 +164,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>adb logcat | grep Display    获取app入口<br>adb shell am start  -n (启动的activity的名字)   com.xueqiu.android/.view.WelcomeActivityAlias -S（启动前杀掉已有的进程）<br>adb shell pm clear com.xueqiu.android (清理指定包的缓存)<br>adb shell “uiautomator dump &amp;&amp; cat /sdcard/window_dump.xml” (捕获当前activity元素并打印出来)  </p>
+        <p>adb logcat | grep Display    获取app入口<br>adb shell dumpsys window | grep “mCurrentFocus”  查看应用当前包名<br>adb shell am start  -n (启动的activity的名字)   com.xueqiu.android/.view.WelcomeActivityAlias -S（启动前杀掉已有的进程）<br>adb shell pm clear com.xueqiu.android (清理指定包的缓存)<br>adb shell “uiautomator dump &amp;&amp; cat /sdcard/window_dump.xml” (捕获当前activity元素并打印出来)  </p>
 <h4 id="Android性能统计"><a href="#Android性能统计" class="headerlink" title="Android性能统计"></a>Android性能统计</h4><ul>
 <li>获取所有dumpsys子命令dumpsys｜grep -i DUMP</li>
 <li>获取当前activity adb shell dumpsys activity top</li>
@@ -175,8 +175,12 @@
 <li>获取cpu信息 adb shell dumpsys cupinfo</li>
 <li>获取gpu 绘制分析 adb shell dumpsys gfxinfo com.android.settinds</li>
 <li>获取短信 adb shell dumpsys activity broadcasts|grep senderName=</li>
-<li></li>
 </ul>
+<h4 id="adb重启"><a href="#adb重启" class="headerlink" title="adb重启"></a>adb重启</h4><ul>
+<li>adb kill-server  </li>
+<li>adb start-server  </li>
+</ul>
+<h4 id="安装-amp-卸载app"><a href="#安装-amp-卸载app" class="headerlink" title="安装&amp;卸载app"></a>安装&amp;卸载app</h4><p>只有一台设备：adb install xxx.apk<br>指定一台设备安装： adb -s xxx install xxx.apk(设备号用 adb devices查看)<br>覆盖安装： adb install -r xxx.apk<br>卸载app： adb uninstall 包名</p>
 <h4 id="appium-server-安装"><a href="#appium-server-安装" class="headerlink" title="appium server 安装"></a>appium server 安装</h4><p>npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org(使用淘宝源)" target="_blank" rel="noopener">https://registry.npm.taobao.org(使用淘宝源)</a><br>cnpm install -g appium（安装appium server）<br>npm install appium-doctor -g  </p>
 
       
