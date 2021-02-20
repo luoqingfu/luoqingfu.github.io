@@ -142,6 +142,84 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-python入门笔记02" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/06/python入门笔记02/">python入门笔记02</a>
+    </h1>
+  
+
+        
+        <a href="/2018/08/06/python入门笔记02/" class="archive-article-date">
+  	<time datetime="2018-08-06T03:25:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Python3-基本数据类型"><a href="#Python3-基本数据类型" class="headerlink" title="Python3 基本数据类型"></a>Python3 基本数据类型</h3><p>python中的变量不需要声明。每个变量在使用前都必须赋值，变量被赋值以后才会被创建。在Python中，变量就是变量，它没有类型，我们所说的类型是指内存中对象的类型。<br>等号（=）用来给变量赋值等号左边是一个变量名，右边是变量的值。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">counter = <span class="number">100</span></span><br><span class="line">miles = <span class="number">100.0</span></span><br><span class="line">name = <span class="string">"lqf"</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="多个变量赋值"><a href="#多个变量赋值" class="headerlink" title="多个变量赋值"></a>多个变量赋值</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = b = c = <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p>以上3个变量都指向同一个内存位置<br></p>
+        
+          <a class="article-more-a" href="/2018/08/06/python入门笔记02/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">python入门笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/06/python入门笔记02/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-python入门笔记01" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -282,86 +360,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/08/04/自动化平台测试开发笔记（1）/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-adb常用命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2012/02/14/adb常用命令/">adb常用命令</a>
-    </h1>
-  
-
-        
-        <a href="/2012/02/14/adb常用命令/" class="archive-article-date">
-  	<time datetime="2012-02-14T14:41:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2012-02-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>adb logcat | grep Display    获取app入口<br>adb shell dumpsys window | grep “mCurrentFocus”  查看应用当前包名<br>adb shell am start  -n (启动的activity的名字)   com.xueqiu.android/.view.WelcomeActivityAlias -S（启动前杀掉已有的进程）<br>adb shell pm clear com.xueqiu.android (清理指定包的缓存)<br>adb shell “uiautomator dump &amp;&amp; cat /sdcard/window_dump.xml” (捕获当前activity元素并打印出来)  </p>
-<h4 id="Android性能统计"><a href="#Android性能统计" class="headerlink" title="Android性能统计"></a>Android性能统计</h4><ul>
-<li>获取所有dumpsys子命令dumpsys｜grep -i DUMP</li>
-<li>获取当前activity adb shell dumpsys activity top</li>
-<li>获取activitiesde 记录，可以获取到appium依赖的原始activity dumpsys activity activities</li>
-<li>获取特定包基本信息 adb shell dumpsys package com.xueqiu.android </li>
-<li>获取系统通知 adb shell sumpsys notification</li>
-<li>获取内存信息 adb shell dumpsys meminfo cmo.android.setting</li>
-<li>获取cpu信息 adb shell dumpsys cupinfo</li>
-<li>获取gpu 绘制分析 adb shell dumpsys gfxinfo com.android.settinds</li>
-<li>获取短信 adb shell dumpsys activity broadcasts|grep senderName=</li>
-</ul>
-<h4 id="adb重启"><a href="#adb重启" class="headerlink" title="adb重启"></a>adb重启</h4><ul>
-<li>adb kill-server  </li>
-<li>adb start-server  </li>
-</ul>
-<h4 id="安装-amp-卸载app"><a href="#安装-amp-卸载app" class="headerlink" title="安装&amp;卸载app"></a>安装&amp;卸载app</h4><p>只有一台设备：adb install xxx.apk<br>指定一台设备安装： adb -s xxx install xxx.apk(设备号用 adb devices查看)<br>覆盖安装： adb install -r xxx.apk<br>卸载app： adb uninstall 包名<br>adb help 查看帮助</p>
-<h4 id="appium-server-安装"><a href="#appium-server-安装" class="headerlink" title="appium server 安装"></a>appium server 安装</h4><p>npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org(使用淘宝源)" target="_blank" rel="noopener">https://registry.npm.taobao.org(使用淘宝源)</a><br>cnpm install -g appium（安装appium server）<br>npm install appium-doctor -g  </p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2012/02/14/adb常用命令/">展开全文 >></a>
         </p>
       
 
